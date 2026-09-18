@@ -34,7 +34,7 @@ responsiva en 1024 / 860 / 600 / 480 / 345 px.
 | `/para-ti/` | Hub de los cuatro momentos de decisión |
 | `/para-ti/familia/` `/descanso/` `/nueva-etapa/` `/extranjero/` | Landing por momento, con formulario y mapa |
 | `/manifiestos/` | Las cuatro tesis |
-| `/terrenos/` | Mapa, fichas y las decisiones pendientes de la página |
+| `/terrenos/` | Fichas de terreno con ficha técnica y fotografías |
 | `/conversaciones/` + `/gracias/` | Registro al encuentro mensual |
 | `/guia/` + `/gracias/` | Lead magnet (propuesta sin confirmar) |
 | `/contacto/` + `/gracias/` | Única página de contacto, con triage |
@@ -44,6 +44,11 @@ responsiva en 1024 / 860 / 600 / 480 / 345 px.
 ## Pendientes de contenido
 
 - **Fotografía real** (Jaime, vida, espacio, materia): hoy son placeholders de marca.
+- **Decisiones abiertas de `/terrenos/`** (antes estaban listadas en la propia página, se
+  movieron aquí por ser notas internas): banco real de terrenos; si se muestra precio (la
+  propuesta es que no, por la regla de no prometer costos); precisión de la ubicación
+  pública (hoy la ficha dice zona, la dirección exacta se reserva al contacto directo); y
+  estatus legal de cada terreno (Jaime como dueño o como gestor).
 - **Banco real de terrenos** con fotos, superficie y estatus; y si se muestra precio y con
   qué precisión la ubicación.
 - **Formularios sin conectar**: falta decidir a dónde llegan los mensajes y quién responde.

@@ -145,20 +145,27 @@ a{color:inherit;text-decoration:none}
   box-shadow:0 0 0 8px rgba(27,25,23,.12)}
 .pin--suave{background:var(--piedra);box-shadow:0 0 0 8px rgba(140,129,119,.14)}
 /* fichas de terreno */
+.aviso{display:flex;flex-direction:column;align-items:flex-start;gap:14px;
+  border-left:2px solid var(--piedra);padding:4px 0 4px 24px;margin-bottom:clamp(36px,4vw,56px)}
+.aviso-titulo{margin:0;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--piedra)}
+.aviso-texto{margin:0;font-size:17px;line-height:1.6;color:var(--grafito);max-width:60ch;text-wrap:pretty}
+
 .fichas{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2px;
-  background:var(--tierra);border:2px solid var(--carbon);border-top:none}
+  background:var(--tierra);border:2px solid var(--carbon)}
 .ficha{background:var(--marfil);display:flex;flex-direction:column;min-width:0}
 .ficha-foto{position:relative;height:clamp(220px,24vw,300px);border-bottom:2px solid var(--carbon)}
 .ficha-miniaturas{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--tierra);
   border-bottom:2px solid var(--carbon)}
-.ficha-mini{display:flex;align-items:center;justify-content:center;height:72px;background:var(--hueso)}
-.ficha-mini img{width:22px;height:auto;opacity:.35}
+.ficha-mini{height:72px;background:var(--hueso);
+  background-image:linear-gradient(135deg,rgba(140,129,119,.14) 25%,transparent 25%,transparent 50%,
+    rgba(140,129,119,.14) 50%,rgba(140,129,119,.14) 75%,transparent 75%);background-size:16px 16px}
+.ficha-zona{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--piedra)}
 .ficha-cuerpo{padding:28px 26px;display:flex;flex-direction:column;gap:14px;flex:1}
 .ficha-etiquetas{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
 .ficha-datos{margin:4px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 18px;
   padding:16px 0;border-top:1px solid var(--tierra);border-bottom:1px solid var(--tierra)}
 .ficha-datos dt{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--piedra)}
-.ficha-datos dd{margin:4px 0 0;font-size:15px;color:var(--grafito)}
+.ficha-datos dd{margin:4px 0 0;font-size:15px;color:var(--piedra)}
 .ficha-cuerpo .link-suave{margin-top:auto;padding-top:10px}
 
 /* mapa (Leaflet) — desactivado por ahora: la ubicación la resolverá la plataforma inmobiliaria */
