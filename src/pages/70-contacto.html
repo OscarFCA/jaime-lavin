@@ -30,11 +30,9 @@ nav: contacto
         </div>
 
         <div class="field">
-          <span class="label">02 — Ubicación de tu terreno o zona de interés</span>
-          <div class="map">
-            <span class="pin" style="left:46%;top:42%"></span>
-            <p class="map-pie">Selector de mapa con pin. Maqueta estática: falta definir el proveedor. Este campo no aplica si solo quieres asistir a una conversación.</p>
-          </div>
+          <label for="zona">02 — Ubicación de tu terreno o zona de interés</label>
+          <input id="zona" name="zona" type="text" placeholder="Municipio, colonia o zona">
+          <p class="pendiente" style="margin-top:10px">Si solo quieres asistir a una conversación, puedes dejarlo vacío.</p>
         </div>
 
         <div class="field">
@@ -59,7 +57,7 @@ nav: contacto
 
         <div>
           <button class="btn btn--dark" type="submit">Enviar y agendar</button>
-          <p class="pendiente" style="margin-top:16px">Maqueta: el envío todavía no está conectado. [Pendiente: a dónde llegan los mensajes, quién los responde y en cuánto tiempo.]</p>
+          <p class="pendiente" style="margin-top:16px">Maqueta: el envío todavía no está conectado. [Pendiente: a dónde llegan los mensajes del formulario. Si prefieres respuesta inmediata, escribe por WhatsApp.]</p>
         </div>
       </form>
     </div>
@@ -72,8 +70,9 @@ nav: contacto
         <p class="footer-enlaces" style="margin-top:26px;color:var(--piedra)">Jaime, en sus redes
           <a href="https://www.instagram.com/jaimelazza/" target="_blank" rel="noopener" style="color:var(--carbon);border-bottom-color:var(--piedra)">Instagram</a>
           <a href="https://www.linkedin.com/in/jaime-lavin-zavala-b5613397/" target="_blank" rel="noopener" style="color:var(--carbon);border-bottom-color:var(--piedra)">LinkedIn</a>
+          <a href="https://api.whatsapp.com/send/?phone=525546151819&amp;text=Hola%2C+escribo+desde+el+sitio+de+Jaime+Lav%C3%ADn.+Me+gustar%C3%ADa+platicar+sobre+un+proyecto.&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener" style="color:var(--carbon);border-bottom-color:var(--piedra)">WhatsApp</a>
         </p>
-        <p class="pendiente" style="margin-top:20px">[Pendiente: tiempo de respuesta esperado y número de WhatsApp.]</p>
+        <p class="pendiente" style="margin-top:20px">[Pendiente: tiempo de respuesta esperado.]</p>
       </div>
       <div class="panel" style="background:var(--carbon);color:var(--blanco);margin-top:24px">
         <p class="eyebrow" style="color:var(--tierra)">Enlaces</p>

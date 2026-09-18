@@ -47,14 +47,15 @@ responsiva en 1024 / 860 / 600 / 480 / 345 px.
 - **Banco real de terrenos** con fotos, superficie y estatus; y si se muestra precio y con
   qué precisión la ubicación.
 - **Formularios sin conectar**: falta decidir a dónde llegan los mensajes y quién responde.
-- **Selector de mapa con pin** en los formularios: sigue siendo maqueta estática. El mapa
-  general (home y `/terrenos/`) ya es un prototipo real con Leaflet + OpenStreetMap
-  (`assets/mapa.js`, se carga solo en las páginas con `mapa: si` en su meta); sus pines
-  son de ejemplo hasta tener el banco real de terrenos.
-- **WhatsApp**: es el único dato de contacto que sigue pendiente. Instagram, LinkedIn, los
-  sitios de LAZZA y LAMZO y el canal de YouTube ya están enlazados en el footer, en
-  `/contacto/` y en `/contacto/enlaces/`. El canal viejo de YouTube
-  (`@lazzaarquitectos2465`) se dejó fuera a propósito.
+- **Mapas desactivados.** Se quitaron de todo el sitio: la ubicación se resolverá cuando
+  las fichas de terreno se fusionen con una plataforma inmobiliaria. En los formularios el
+  selector con pin es ahora un campo de texto de zona. El motor sigue en el repo
+  (`assets/mapa.js` + `LEAFLET_*` en `build.py`): para reactivar un mapa basta poner
+  `mapa: si` en el meta de la página y un contenedor con `data-mapa`.
+- **Contacto ya enlazado**: WhatsApp (55 4615 1819, con mensaje prellenado), Instagram y
+  LinkedIn de Jaime, más los sitios y redes de LAZZA y LAMZO, en el footer, en `/contacto/`
+  y en `/contacto/enlaces/`. El canal viejo de YouTube (`@lazzaarquitectos2465`) se dejó
+  fuera a propósito. Sigue pendiente el tiempo de respuesta esperado.
 - **Entrevista de tesis, voz e historias** con Jaime: las historias de `/sobre-mi/` y el
   texto largo de `/manifiestos/` están reservados, no redactados a su nombre.
 - Nav del canvas vs. nav de `content.md`, y cuál es el hero definitivo (§9 y §12 de

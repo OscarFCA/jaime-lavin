@@ -14,7 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/styles.css">
 <script>document.documentElement.className+=" js"</script>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
 </head>
 <body>
 <a class="skip" href="#main">Saltar al contenido</a>
@@ -56,59 +56,93 @@
 
 <section class="section">
   <div class="wrap">
-    <p class="eyebrow">01 — Dónde están</p>
-    <div class="mapa mapa--alto" data-mapa='{"centro":[19.25,-99.60],"zoom":8,"pines":[[19.1950,-100.1310,"<b>[Terreno de ejemplo]</b><br>Zona aproximada. Pendiente del banco real."],[18.9847,-99.0930,"<b>[Terreno de ejemplo]</b><br>Zona aproximada. Pendiente del banco real."],[19.4100,-99.2300,"<b>[Terreno de ejemplo]</b><br>Zona aproximada. Pendiente del banco real."]]}'></div>
-    <p class="mapa-pie">Un pin por terreno, en zona aproximada. Prototipo con Leaflet sobre OpenStreetMap: los pines son de ejemplo y falta decidir si la ubicación pública será la zona o la dirección exacta.</p>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
     <div class="rowhead rowhead--linea">
       <div class="min0">
-        <p class="eyebrow">02 — Fichas</p>
+        <p class="eyebrow">01 — Fichas</p>
         <h2 class="h2" style="margin-bottom:16px">Cada terreno, con lo que hay que saber.</h2>
         <p class="p">Zona, superficie, características del sitio y qué tipo de proyecto podría vivir ahí.</p>
       </div>
       <a class="link" href="../contacto/">Preguntar por un terreno</a>
     </div>
-    <div class="cards cards--ancha" style="border-top:none">
-      <div class="card card--foto">
-        <div class="media media--card"><div class="photo"><img src="../assets/jl-isotipo.png" alt=""><span>Foto del terreno — pendiente</span></div></div>
-        <div class="card-cuerpo">
-          <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+
+    <div class="fichas">
+      <article class="ficha">
+        <div class="ficha-foto">
+          <div class="photo"><img src="../assets/jl-isotipo.png" alt=""><span>Fotografía principal — pendiente</span></div>
+        </div>
+        <div class="ficha-miniaturas">
+          <span class="ficha-mini"><img src="../assets/jl-isotipo.png" alt=""></span>
+          <span class="ficha-mini"><img src="../assets/jl-isotipo.png" alt=""></span>
+          <span class="ficha-mini"><img src="../assets/jl-isotipo.png" alt=""></span>
+        </div>
+        <div class="ficha-cuerpo">
+          <div class="ficha-etiquetas">
             <span class="tag">Estatus por definir</span>
             <span class="num" style="text-transform:uppercase;font-size:12px;letter-spacing:.1em">Zona aproximada</span>
           </div>
           <h3 class="h3 h3--grande">[Nombre o zona del terreno]</h3>
-          <p class="p" style="font-size:15px">[Superficie, topografía, accesos, orientación y qué tipo de proyecto podría vivir ahí.]</p>
+          <dl class="ficha-datos">
+            <div><dt>Superficie</dt><dd>[pendiente]</dd></div>
+            <div><dt>Frente</dt><dd>[pendiente]</dd></div>
+            <div><dt>Topografía</dt><dd>[pendiente]</dd></div>
+            <div><dt>Servicios</dt><dd>[pendiente]</dd></div>
+          </dl>
+          <p class="p" style="font-size:15px">[Qué tipo de proyecto podría vivir aquí: orientación, accesos, vistas y lo que el sitio permite.]</p>
           <a class="link-suave" href="../contacto/">Preguntar por este terreno →</a>
         </div>
-      </div>
-      <div class="card card--foto">
-        <div class="media media--card"><div class="photo"><img src="../assets/jl-isotipo.png" alt=""><span>Foto del terreno — pendiente</span></div></div>
-        <div class="card-cuerpo">
-          <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+      </article>
+
+      <article class="ficha">
+        <div class="ficha-foto">
+          <div class="photo"><img src="../assets/jl-isotipo.png" alt=""><span>Fotografía principal — pendiente</span></div>
+        </div>
+        <div class="ficha-miniaturas">
+          <span class="ficha-mini"><img src="../assets/jl-isotipo.png" alt=""></span>
+          <span class="ficha-mini"><img src="../assets/jl-isotipo.png" alt=""></span>
+          <span class="ficha-mini"><img src="../assets/jl-isotipo.png" alt=""></span>
+        </div>
+        <div class="ficha-cuerpo">
+          <div class="ficha-etiquetas">
             <span class="tag">Estatus por definir</span>
             <span class="num" style="text-transform:uppercase;font-size:12px;letter-spacing:.1em">Zona aproximada</span>
           </div>
           <h3 class="h3 h3--grande">[Nombre o zona del terreno]</h3>
-          <p class="p" style="font-size:15px">[Superficie, topografía, accesos, orientación y qué tipo de proyecto podría vivir ahí.]</p>
+          <dl class="ficha-datos">
+            <div><dt>Superficie</dt><dd>[pendiente]</dd></div>
+            <div><dt>Frente</dt><dd>[pendiente]</dd></div>
+            <div><dt>Topografía</dt><dd>[pendiente]</dd></div>
+            <div><dt>Servicios</dt><dd>[pendiente]</dd></div>
+          </dl>
+          <p class="p" style="font-size:15px">[Qué tipo de proyecto podría vivir aquí: orientación, accesos, vistas y lo que el sitio permite.]</p>
           <a class="link-suave" href="../contacto/">Preguntar por este terreno →</a>
         </div>
-      </div>
-      <div class="card card--foto">
-        <div class="media media--card"><div class="photo"><img src="../assets/jl-isotipo.png" alt=""><span>Foto del terreno — pendiente</span></div></div>
-        <div class="card-cuerpo">
-          <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+      </article>
+
+      <article class="ficha">
+        <div class="ficha-foto">
+          <div class="photo"><img src="../assets/jl-isotipo.png" alt=""><span>Fotografía principal — pendiente</span></div>
+        </div>
+        <div class="ficha-miniaturas">
+          <span class="ficha-mini"><img src="../assets/jl-isotipo.png" alt=""></span>
+          <span class="ficha-mini"><img src="../assets/jl-isotipo.png" alt=""></span>
+          <span class="ficha-mini"><img src="../assets/jl-isotipo.png" alt=""></span>
+        </div>
+        <div class="ficha-cuerpo">
+          <div class="ficha-etiquetas">
             <span class="tag">Estatus por definir</span>
             <span class="num" style="text-transform:uppercase;font-size:12px;letter-spacing:.1em">Zona aproximada</span>
           </div>
           <h3 class="h3 h3--grande">[Nombre o zona del terreno]</h3>
-          <p class="p" style="font-size:15px">[Superficie, topografía, accesos, orientación y qué tipo de proyecto podría vivir ahí.]</p>
+          <dl class="ficha-datos">
+            <div><dt>Superficie</dt><dd>[pendiente]</dd></div>
+            <div><dt>Frente</dt><dd>[pendiente]</dd></div>
+            <div><dt>Topografía</dt><dd>[pendiente]</dd></div>
+            <div><dt>Servicios</dt><dd>[pendiente]</dd></div>
+          </dl>
+          <p class="p" style="font-size:15px">[Qué tipo de proyecto podría vivir aquí: orientación, accesos, vistas y lo que el sitio permite.]</p>
           <a class="link-suave" href="../contacto/">Preguntar por este terreno →</a>
         </div>
-      </div>
+      </article>
     </div>
   </div>
 </section>
@@ -120,8 +154,8 @@
     <div class="cards" style="margin-top:36px">
       <article class="card"><span class="num">01</span><h3 class="h3">Banco real de terrenos</h3><p class="p" style="font-size:15px">Cuáles están disponibles hoy, con fotos y datos reales. Sin esto, la página no se publica: se pospone.</p></article>
       <article class="card"><span class="num">02</span><h3 class="h3">Precio visible o no</h3><p class="p" style="font-size:15px">La propuesta es no mostrarlo, en línea con la regla de no prometer costos en ninguna pieza pública. Falta que Jaime lo confirme.</p></article>
-      <article class="card"><span class="num">03</span><h3 class="h3">Precisión de la ubicación</h3><p class="p" style="font-size:15px">Zona aproximada en el mapa público y dirección exacta solo después del contacto directo. Falta confirmarlo.</p></article>
-      <article class="card"><span class="num">04</span><h3 class="h3">Estatus legal</h3><p class="p" style="font-size:15px">Si Jaime es dueño o gestor de cada terreno, y si eso se indica en la ficha o queda como información interna.</p></article>
+      <article class="card"><span class="num">03</span><h3 class="h3">Precisión de la ubicación</h3><p class="p" style="font-size:15px">Hoy la ficha dice zona aproximada. La dirección exacta se reserva para el contacto directo.</p></article>
+      <article class="card"><span class="num">04</span><h3 class="h3">Plataforma inmobiliaria</h3><p class="p" style="font-size:15px">Estas fichas se van a fusionar después con una plataforma inmobiliaria. Por eso el mapa queda fuera por ahora: lo resolverá esa plataforma.</p></article>
     </div>
   </div>
 </section>
@@ -172,6 +206,7 @@
         <p class="footer-enlaces" style="margin-top:14px">Jaime
           <a href="https://www.instagram.com/jaimelazza/" target="_blank" rel="noopener">Instagram</a>
           <a href="https://www.linkedin.com/in/jaime-lavin-zavala-b5613397/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://api.whatsapp.com/send/?phone=525546151819&amp;text=Hola%2C+escribo+desde+el+sitio+de+Jaime+Lav%C3%ADn.+Me+gustar%C3%ADa+platicar+sobre+un+proyecto.&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener">WhatsApp</a>
         </p>
       </div>
     </div>
@@ -195,7 +230,6 @@
   addEventListener('resize', function(){ if(innerWidth>860) estado(false); });
 })();
 </script>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="../assets/mapa.js"></script>
+
 </body>
 </html>
