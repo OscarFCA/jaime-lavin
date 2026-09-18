@@ -14,6 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 <script>document.documentElement.className+=" js"</script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
 <body>
 <a class="skip" href="#main">Saltar al contenido</a>
@@ -141,14 +142,10 @@
         </div>
       </div>
       <div class="card card--foto" style="background:var(--hueso)">
-        <div class="map" style="border:none;flex:1;min-height:clamp(260px,28vw,360px)">
-          <span class="pin" style="left:34%;top:38%"></span>
-          <span class="pin" style="left:62%;top:60%"></span>
-          <span class="pin pin--suave" style="left:48%;top:22%"></span>
-        </div>
+        <div class="mapa mapa--tarjeta" data-mapa='{"centro":[19.25,-99.60],"zoom":8,"pines":[[19.1950,-100.1310,"<b>[Terreno de ejemplo]</b><br>Zona aproximada. Pendiente del banco real."],[18.9847,-99.0930,"<b>[Terreno de ejemplo]</b><br>Zona aproximada. Pendiente del banco real."],[19.4100,-99.2300,"<b>[Terreno de ejemplo]</b><br>Zona aproximada. Pendiente del banco real."]]}'></div>
         <div class="card-cuerpo" style="border-top:2px solid var(--carbon)">
           <p class="eyebrow" style="margin:0">Mapa general</p>
-          <p class="p" style="font-size:15px">Un pin por terreno, en zona aproximada. Maqueta estática: el proveedor de mapa sigue pendiente.</p>
+          <p class="p" style="font-size:15px">Un pin por terreno, en zona aproximada. Prototipo sobre OpenStreetMap; los pines son de ejemplo hasta tener el banco real.</p>
         </div>
       </div>
     </div>
@@ -255,5 +252,7 @@
   addEventListener('resize', function(){ if(innerWidth>860) estado(false); });
 })();
 </script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="assets/mapa.js"></script>
 </body>
 </html>

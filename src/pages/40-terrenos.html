@@ -3,6 +3,7 @@ out: terrenos/index.html
 title: Terrenos — Jaime Lavín
 desc: Terrenos que Jaime conoce de cerca, cada uno con su propio potencial y su propio tipo de proyecto.
 nav: terrenos
+mapa: si
 -->
 
 <section class="page-hero">
@@ -22,13 +23,8 @@ nav: terrenos
 <section class="section">
   <div class="wrap">
     <p class="eyebrow">01 — Dónde están</p>
-    <div class="map" style="min-height:clamp(300px,36vw,460px)">
-      <span class="pin" style="left:28%;top:34%"></span>
-      <span class="pin" style="left:58%;top:56%"></span>
-      <span class="pin pin--suave" style="left:44%;top:20%"></span>
-      <span class="pin pin--suave" style="left:72%;top:38%"></span>
-      <p class="map-pie">Un pin por terreno, en zona aproximada. Maqueta estática: falta definir el proveedor de mapa y si la ubicación pública será la zona o la dirección exacta.</p>
-    </div>
+    <div class="mapa mapa--alto" data-mapa='{"centro":[19.25,-99.60],"zoom":8,"pines":[[19.1950,-100.1310,"<b>[Terreno de ejemplo]</b><br>Zona aproximada. Pendiente del banco real."],[18.9847,-99.0930,"<b>[Terreno de ejemplo]</b><br>Zona aproximada. Pendiente del banco real."],[19.4100,-99.2300,"<b>[Terreno de ejemplo]</b><br>Zona aproximada. Pendiente del banco real."]]}'></div>
+    <p class="mapa-pie">Un pin por terreno, en zona aproximada. Prototipo con Leaflet sobre OpenStreetMap: los pines son de ejemplo y falta decidir si la ubicación pública será la zona o la dirección exacta.</p>
   </div>
 </section>
 

@@ -46,7 +46,10 @@ responsiva en 1024 / 860 / 600 / 480 / 345 px.
 - **Banco real de terrenos** con fotos, superficie y estatus; y si se muestra precio y con
   qué precisión la ubicación.
 - **Formularios sin conectar**: falta decidir a dónde llegan los mensajes y quién responde.
-- **Proveedor de mapa** para el selector con pin.
+- **Selector de mapa con pin** en los formularios: sigue siendo maqueta estática. El mapa
+  general (home y `/terrenos/`) ya es un prototipo real con Leaflet + OpenStreetMap
+  (`assets/mapa.js`, se carga solo en las páginas con `mapa: si` en su meta); sus pines
+  son de ejemplo hasta tener el banco real de terrenos.
 - **Entrevista de tesis, voz e historias** con Jaime: las historias de `/sobre-mi/` y el
   texto largo de `/manifiestos/` están reservados, no redactados a su nombre.
 - Nav del canvas vs. nav de `content.md`, y cuál es el hero definitivo (§9 y §12 de

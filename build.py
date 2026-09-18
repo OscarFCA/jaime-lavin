@@ -19,6 +19,12 @@ RAIZ = pathlib.Path(__file__).parent
 SRC = RAIZ / "src"
 NAV = ["inicio", "sobre-mi", "para-ti", "manifiestos", "terrenos", "conversaciones", "contacto"]
 
+# Mapas: Leaflet (BSD-2) sobre datos de OpenStreetMap (ODbL), teselas con el estilo
+# Positron de CARTO. Solo se cargan en las páginas cuyo meta trae `mapa: si`.
+LEAFLET_HEAD = '<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">'
+LEAFLET_FOOT = ('<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>\n'
+                '<script src="{{B}}assets/mapa.js"></script>')
+
 shell = (SRC / "shell.html").read_text()
 generados = []
 
@@ -36,6 +42,8 @@ for frag in sorted((SRC / "pages").glob("*.html")):
     base = "../" * (len(pathlib.PurePath(meta["out"]).parts) - 1)
 
     html = shell.replace("{{TITLE}}", meta["title"]).replace("{{DESC}}", meta["desc"])
+    html = html.replace("{{HEAD_EXTRA}}", LEAFLET_HEAD if meta.get("mapa") == "si" else "")
+    html = html.replace("{{FOOT_EXTRA}}", LEAFLET_FOOT if meta.get("mapa") == "si" else "")
     html = html.replace("{{BODY}}", cuerpo.strip())
     for clave in NAV:
         activo = ' class="is-active"' if meta.get("nav") == clave else ""

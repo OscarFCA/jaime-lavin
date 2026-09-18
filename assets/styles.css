@@ -144,6 +144,17 @@ a{color:inherit;text-decoration:none}
 .pin{position:absolute;width:14px;height:14px;background:var(--carbon);border-radius:50%;
   box-shadow:0 0 0 8px rgba(27,25,23,.12)}
 .pin--suave{background:var(--piedra);box-shadow:0 0 0 8px rgba(140,129,119,.14)}
+/* mapa real (Leaflet) */
+.mapa{position:relative;z-index:0;min-height:clamp(260px,30vw,380px);
+  border:2px solid var(--carbon);background:var(--hueso)}
+.mapa--alto{min-height:clamp(320px,38vw,480px)}
+.mapa--tarjeta{border:none;flex:1;min-height:clamp(260px,28vw,360px)}
+.leaflet-container{font-family:var(--sans);background:var(--hueso)}
+.leaflet-tile-pane{filter:grayscale(1) contrast(.86) brightness(1.06)}
+.leaflet-control-attribution{font-size:10px;background:rgba(241,236,228,.88)}
+.leaflet-bar a{color:var(--carbon)}
+.mapa-pie{margin:0;padding:14px 18px;border-top:2px solid var(--carbon);
+  background:var(--marfil);font-size:13px;line-height:1.5;color:var(--grafito)}
 .map-pie{position:absolute;left:0;right:0;bottom:0;background:var(--marfil);
   border-top:2px solid var(--carbon);padding:14px 18px;font-size:13px;line-height:1.5;color:var(--grafito)}
 
