@@ -51,6 +51,10 @@ responsiva en 1024 / 860 / 600 / 480 / 345 px.
   general (home y `/terrenos/`) ya es un prototipo real con Leaflet + OpenStreetMap
   (`assets/mapa.js`, se carga solo en las páginas con `mapa: si` en su meta); sus pines
   son de ejemplo hasta tener el banco real de terrenos.
+- **WhatsApp**: es el único dato de contacto que sigue pendiente. Instagram, LinkedIn, los
+  sitios de LAZZA y LAMZO y el canal de YouTube ya están enlazados en el footer, en
+  `/contacto/` y en `/contacto/enlaces/`. El canal viejo de YouTube
+  (`@lazzaarquitectos2465`) se dejó fuera a propósito.
 - **Entrevista de tesis, voz e historias** con Jaime: las historias de `/sobre-mi/` y el
   texto largo de `/manifiestos/` están reservados, no redactados a su nombre.
 - Nav del canvas vs. nav de `content.md`, y cuál es el hero definitivo (§9 y §12 de
