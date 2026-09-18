@@ -145,11 +145,6 @@ a{color:inherit;text-decoration:none}
   box-shadow:0 0 0 8px rgba(27,25,23,.12)}
 .pin--suave{background:var(--piedra);box-shadow:0 0 0 8px rgba(140,129,119,.14)}
 /* fichas de terreno */
-.aviso{display:flex;flex-direction:column;align-items:flex-start;gap:14px;
-  border-left:2px solid var(--piedra);padding:4px 0 4px 24px;margin-bottom:clamp(36px,4vw,56px)}
-.aviso-titulo{margin:0;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--piedra)}
-.aviso-texto{margin:0;font-size:17px;line-height:1.6;color:var(--grafito);max-width:60ch;text-wrap:pretty}
-
 .fichas{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2px;
   background:var(--tierra);border:2px solid var(--carbon)}
 .ficha{background:var(--marfil);display:flex;flex-direction:column;min-width:0}
