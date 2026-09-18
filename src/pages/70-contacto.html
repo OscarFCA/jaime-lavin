@@ -1,0 +1,76 @@
+<!--meta
+out: contacto/index.html
+title: Contacto — Jaime Lavín
+desc: Habla con Jaime antes de decidir. Una sola página de contacto, con una pregunta de entrada.
+nav: contacto
+-->
+
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">Contacto</p>
+    <h1 class="h1">Habla con Jaime antes de decidir.</h1>
+    <p class="lead">Una sola pregunta antes del formulario: en qué momento estás.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap split split--inicio">
+    <div class="min0">
+      <form class="form" action="{{B}}contacto/gracias/" method="get" style="max-width:none">
+        <div class="field">
+          <span class="label">01 — ¿En qué momento estás?</span>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="momento" value="por-comprar"><span>Estoy por comprar un terreno</span></label>
+            <label class="choice"><input type="radio" name="momento" value="ya-tengo"><span>Ya tengo un terreno</span></label>
+            <label class="choice"><input type="radio" name="momento" value="construir"><span>Quiero construir o transformar mi casa</span></label>
+            <label class="choice"><input type="radio" name="momento" value="heredado"><span>Tengo una propiedad o terreno heredado</span></label>
+            <label class="choice"><input type="radio" name="momento" value="terreno-visto"><span>Me interesa un terreno de los que vi</span></label>
+            <label class="choice"><input type="radio" name="momento" value="conversacion"><span>Quiero asistir a una conversación con Jaime</span></label>
+          </div>
+        </div>
+
+        <div class="field">
+          <span class="label">02 — Ubicación de tu terreno o zona de interés</span>
+          <div class="map">
+            <span class="pin" style="left:46%;top:42%"></span>
+            <p class="map-pie">Selector de mapa con pin. Maqueta estática: falta definir el proveedor. Este campo no aplica si solo quieres asistir a una conversación.</p>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="alcance">03 — Alcance aproximado del proyecto (opcional)</label>
+          <input id="alcance" name="alcance" type="text" placeholder="Superficie, número de recámaras, o lo que ya tengas claro">
+          <p class="pendiente" style="margin-top:10px">Sin rango de inversión en dinero: el filtro aquí es el momento de vida, no el monto.</p>
+        </div>
+
+        <div class="field">
+          <label for="mensaje">04 — ¿Qué necesitas resolver?</label>
+          <textarea id="mensaje" name="mensaje" placeholder="Escríbelo como lo dirías en una conversación."></textarea>
+        </div>
+
+        <div class="field">
+          <label for="nombre">Tu nombre</label>
+          <input id="nombre" name="nombre" type="text" autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="correo">Correo o teléfono</label>
+          <input id="correo" name="correo" type="text" autocomplete="email">
+        </div>
+
+        <div>
+          <button class="btn btn--dark" type="submit">Enviar y agendar</button>
+          <p class="pendiente" style="margin-top:16px">Maqueta: el envío todavía no está conectado. [Pendiente: a dónde llegan los mensajes, quién los responde y en cuánto tiempo.]</p>
+        </div>
+      </form>
+    </div>
+
+    <div class="min0">
+      <div class="panel">
+        <p class="eyebrow">Qué esperar</p>
+        <p class="nota" style="margin-bottom:28px">Esta conversación no es una cotización. Es el primer paso para tomar una mejor decisión.</p>
+        <p class="p" style="font-size:16px">Una sola página de contacto, a propósito. No hay tres formularios compitiendo ni una escalera de productos detrás: todo camino termina en una conversación con Jaime.</p>
+        <p class="pendiente" style="margin-top:24px">[Pendiente: tiempo de respuesta esperado, y handles de Instagram y LinkedIn.]</p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,50 +1,22 @@
-<!doctype html>
-<html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Jaime Lavín — Arquitectura para la vida</title>
-<meta name="description" content="Del terreno al último detalle. Jaime Lavín acompaña decisiones sobre el lugar donde vas a vivir, invertir y dejar parte de tu historia.">
-<meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#1B1917">
-<link rel="icon" type="image/png" href="assets/favicon.png">
-<link rel="apple-touch-icon" href="assets/jl-isotipo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css">
-</head>
-<body>
-<a class="skip" href="#main">Saltar al contenido</a>
+<!--meta
+out: index.html
+title: Jaime Lavín — Arquitectura para la vida
+desc: Del terreno al último detalle. Jaime Lavín acompaña decisiones sobre el lugar donde vas a vivir, invertir y dejar parte de tu historia.
+nav: inicio
+-->
 
-<header class="site-header">
-  <a href="" aria-label="Jaime Lavín — inicio">
-    <img class="firma" src="assets/firma-blanca.png" alt="Jaime Lavín — Arquitectura para la vida">
-  </a>
-  <nav class="site-nav" aria-label="Principal">
-    <a href="" class="is-active">Inicio</a>
-    <a href="sobre-mi/">Sobre mí</a>
-    <a href="para-ti/">Para ti</a>
-    <a href="manifiestos/">Manifiestos</a>
-    <a href="terrenos/">Terrenos</a>
-    <a href="conversaciones/">Conversaciones</a>
-    <a class="nav-cta" href="contacto/">Contacto</a>
-  </nav>
-</header>
-
-<main id="main">
 <section class="section--dark" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));border-top:2px solid var(--piedra)">
   <div style="padding:clamp(48px,7vw,104px) var(--pad-x);display:flex;flex-direction:column;justify-content:center;gap:36px;min-width:0">
     <p class="eyebrow" style="margin:0;color:var(--tierra)">Arquitectura para la vida</p>
     <h1 class="h1 h1--corto">Una vida extraordinaria merece un lugar para vivirla.</h1>
     <p class="lead" style="color:var(--hueso)">Del terreno al último detalle, Jaime te acompaña a tomar mejores decisiones sobre el lugar donde vas a vivir, invertir y dejar parte de tu historia.</p>
     <div class="acciones">
-      <a class="btn btn--light" href="contacto/">Habla con Jaime antes de decidir</a>
-      <a class="btn btn--ghost" href="conversaciones/">Ver conversaciones</a>
+      <a class="btn btn--light" href="{{B}}contacto/">Habla con Jaime antes de decidir</a>
+      <a class="btn btn--ghost" href="{{B}}conversaciones/">Ver conversaciones</a>
     </div>
   </div>
   <div class="media media--hero">
-    <div class="photo photo--dark"><img src="assets/jl-isotipo.png" alt=""><span>Fotografía de Jaime — pendiente</span></div>
+    <div class="photo photo--dark"><img src="{{B}}assets/jl-isotipo.png" alt=""><span>Fotografía de Jaime — pendiente</span></div>
   </div>
 </section>
 
@@ -60,25 +32,25 @@
         <span class="num">01</span>
         <h3 class="h3">¿Quieres una casa que te represente y que después se quede en tu familia?</h3>
         <p class="p" style="font-size:15px;line-height:1.55">La casa donde crecen los hijos, se reúne la familia y, con el tiempo, llegan los nietos.</p>
-        <a class="link-suave" href="para-ti/familia/">Hablemos →</a>
+        <a class="link-suave" href="{{B}}para-ti/familia/">Hablemos →</a>
       </article>
       <article class="card">
         <span class="num">02</span>
         <h3 class="h3">¿Piensas en una segunda casa y no sabes dónde empezar?</h3>
         <p class="p" style="font-size:15px;line-height:1.55">Una segunda casa para descanso, familia y amigos.</p>
-        <a class="link-suave" href="para-ti/descanso/">Hablemos →</a>
+        <a class="link-suave" href="{{B}}para-ti/descanso/">Hablemos →</a>
       </article>
       <article class="card">
         <span class="num">03</span>
         <h3 class="h3">¿Cambió tu etapa y tu casa sigue siendo la de antes?</h3>
         <p class="p" style="font-size:15px;line-height:1.55">Un departamento, una remodelación o una propiedad que represente quién eres ahora.</p>
-        <a class="link-suave" href="para-ti/nueva-etapa/">Hablemos →</a>
+        <a class="link-suave" href="{{B}}para-ti/nueva-etapa/">Hablemos →</a>
       </article>
       <article class="card">
         <span class="num">04</span>
         <h3 class="h3">¿Vas a decidir sobre una propiedad en México desde fuera del país?</h3>
         <p class="p" style="font-size:15px;line-height:1.55">Acompañamiento para tomar la decisión desde la distancia, con alguien que va al terreno por ti.</p>
-        <a class="link-suave" href="para-ti/extranjero/">Hablemos →</a>
+        <a class="link-suave" href="{{B}}para-ti/extranjero/">Hablemos →</a>
       </article>
     </div>
   </div>
@@ -91,10 +63,10 @@
       <blockquote class="quote" style="margin-bottom:28px">Del terreno al último detalle.</blockquote>
       <p class="p" style="color:var(--carbon);max-width:48ch">Un terreno puede parecer extraordinario y ser completamente equivocado para la casa que quieres. Trabajo desde esa pregunta: dónde, por qué ahí, y qué vida va a ocurrir dentro.</p>
       <p class="p" style="color:var(--carbon);max-width:48ch">Desde 1997, acompañando decisiones de terreno, obra y detalle.</p>
-      <p style="margin-top:28px"><a class="link" href="sobre-mi/">Conoce a Jaime</a></p>
+      <p style="margin-top:28px"><a class="link" href="{{B}}sobre-mi/">Conoce a Jaime</a></p>
     </div>
     <div class="media min0">
-      <div class="photo"><img src="assets/jl-isotipo.png" alt=""><span>Materia: piedra, madera, luz — pendiente</span></div>
+      <div class="photo"><img src="{{B}}assets/jl-isotipo.png" alt=""><span>Materia: piedra, madera, luz — pendiente</span></div>
     </div>
   </div>
 </section>
@@ -107,11 +79,11 @@
         <h2 class="h2" style="margin-bottom:16px">Lugares donde empezar.</h2>
         <p class="p">Terrenos reales que Jaime conoce de cerca, cada uno con su propio potencial y su propio tipo de proyecto. La conversación decide si alguno calza con lo que buscas.</p>
       </div>
-      <a class="link" href="terrenos/">Ver todos los terrenos</a>
+      <a class="link" href="{{B}}terrenos/">Ver todos los terrenos</a>
     </div>
     <div class="cards cards--ancha" style="border-top:none">
       <div class="card card--foto">
-        <div class="media media--card"><div class="photo"><img src="assets/jl-isotipo.png" alt=""><span>Foto del terreno — pendiente</span></div></div>
+        <div class="media media--card"><div class="photo"><img src="{{B}}assets/jl-isotipo.png" alt=""><span>Foto del terreno — pendiente</span></div></div>
         <div class="card-cuerpo">
           <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
             <span class="tag">Estatus por definir</span>
@@ -119,11 +91,11 @@
           </div>
           <h3 class="h3 h3--grande">[Nombre o zona del terreno]</h3>
           <p class="p" style="font-size:15px">[Tamaño, características del sitio y qué tipo de proyecto podría vivir ahí. Pendiente de banco real de terrenos.]</p>
-          <a class="link-suave" href="contacto/">Preguntar por este terreno →</a>
+          <a class="link-suave" href="{{B}}contacto/">Preguntar por este terreno →</a>
         </div>
       </div>
       <div class="card card--foto">
-        <div class="media media--card"><div class="photo"><img src="assets/jl-isotipo.png" alt=""><span>Foto del terreno — pendiente</span></div></div>
+        <div class="media media--card"><div class="photo"><img src="{{B}}assets/jl-isotipo.png" alt=""><span>Foto del terreno — pendiente</span></div></div>
         <div class="card-cuerpo">
           <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
             <span class="tag">Estatus por definir</span>
@@ -131,7 +103,7 @@
           </div>
           <h3 class="h3 h3--grande">[Nombre o zona del terreno]</h3>
           <p class="p" style="font-size:15px">[Tamaño, características del sitio y qué tipo de proyecto podría vivir ahí. Pendiente de banco real de terrenos.]</p>
-          <a class="link-suave" href="contacto/">Preguntar por este terreno →</a>
+          <a class="link-suave" href="{{B}}contacto/">Preguntar por este terreno →</a>
         </div>
       </div>
       <div class="card card--foto" style="background:var(--hueso)">
@@ -163,7 +135,7 @@
         <p class="eyebrow">05 — Manifiestos</p>
         <h2 class="h2" style="margin:0">Cuatro cosas que creo.</h2>
       </div>
-      <a class="link" href="manifiestos/">Leer los manifiestos</a>
+      <a class="link" href="{{B}}manifiestos/">Leer los manifiestos</a>
     </div>
     <div class="cards cards--dark">
       <article class="card"><span class="romano">I</span><p class="tesis">Una casa no es un plano; es la vida que va a ocurrir ahí.</p></article>
@@ -181,7 +153,7 @@
       <h2 class="h2" style="max-width:26ch">Del terreno al último detalle: conversaciones con Jaime Lavín.</h2>
       <p class="p" style="max-width:48ch;margin-bottom:32px">Un encuentro mensual entre el contenido y la conversación. Pueden participar directores, especialistas inmobiliarios, legales, de inversión o de paisaje.</p>
       <div style="display:flex;flex-wrap:wrap;gap:20px;align-items:center">
-        <a class="btn btn--dark" href="conversaciones/">Reservar mi lugar</a>
+        <a class="btn btn--dark" href="{{B}}conversaciones/">Reservar mi lugar</a>
         <span class="num" style="font-size:13px;letter-spacing:.08em;text-transform:uppercase">Próxima fecha: por confirmar</span>
       </div>
     </div>
@@ -197,41 +169,8 @@
         <span class="choice">Me interesa un terreno de los que vi</span>
         <span class="choice">Quiero asistir a una conversación con Jaime</span>
       </div>
-      <a class="btn btn--dark" href="contacto/">Ir al formulario</a>
+      <a class="btn btn--dark" href="{{B}}contacto/">Ir al formulario</a>
       <p class="nota" style="margin-top:28px">Esta conversación no es una cotización. Es el primer paso para tomar una mejor decisión.</p>
     </div>
   </div>
 </section>
-</main>
-
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <img class="isotipo" src="assets/jl-isotipo.png" alt="JL.">
-        <p class="footer-firma">Jaime Lavín. Arquitectura para la vida.</p>
-      </div>
-      <nav class="footer-col" aria-label="Secundaria">
-        <p class="titulo">Navegación</p>
-        <a href="sobre-mi/">Sobre mí</a>
-        <a href="para-ti/">Para ti</a>
-        <a href="manifiestos/">Manifiestos</a>
-        <a href="terrenos/">Terrenos</a>
-        <a href="conversaciones/">Conversaciones</a>
-        <a href="guia/">Guía</a>
-      </nav>
-      <div class="footer-col">
-        <p class="titulo">Ecosistema</p>
-        <p class="p" style="color:var(--tierra);max-width:34ch">LAZZA Arquitectos y LAMZO ejecutan los proyectos. Aquí habla Jaime.</p>
-      </div>
-      <div class="footer-col">
-        <p class="titulo">Contacto</p>
-        <a href="contacto/" style="border-bottom:2px solid var(--grafito);padding-bottom:6px;align-self:flex-start">Habla con Jaime antes de decidir</a>
-        <p class="pendiente" style="margin-top:8px">Instagram y LinkedIn: por confirmar</p>
-      </div>
-    </div>
-    <p class="footer-legal">© 2026 Jaime Lavín — borrador de trabajo, no aprobado</p>
-  </div>
-</footer>
-</body>
-</html>
