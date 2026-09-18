@@ -13,15 +13,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/styles.css">
+<script>document.documentElement.className+=" js"</script>
 </head>
 <body>
 <a class="skip" href="#main">Saltar al contenido</a>
 
 <header class="site-header">
-  <a href="../" aria-label="Jaime Lavín — inicio">
-    <img class="firma" src="../assets/firma-blanca.png" alt="Jaime Lavín — Arquitectura para la vida">
-  </a>
-  <nav class="site-nav" aria-label="Principal">
+  <div class="site-bar">
+    <a href="../" aria-label="Jaime Lavín — inicio">
+      <img class="firma" src="../assets/firma-blanca.png" alt="Jaime Lavín — Arquitectura para la vida">
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+      <span class="rayas" aria-hidden="true"></span>
+    </button>
+  </div>
+  <nav class="site-nav" id="menu" aria-label="Principal">
     <a href="../">Inicio</a>
     <a href="../sobre-mi/">Sobre mí</a>
     <a href="../para-ti/">Para ti</a>
@@ -115,5 +121,21 @@
     <p class="footer-legal">© 2026 Jaime Lavín — borrador de trabajo, no aprobado</p>
   </div>
 </footer>
+<script>
+(function(){
+  var h=document.querySelector('.site-header'), b=h&&h.querySelector('.nav-toggle');
+  if(!b) return;
+  function estado(abierto){
+    h.classList.toggle('abierto', abierto);
+    document.body.classList.toggle('con-menu', abierto);
+    b.setAttribute('aria-expanded', abierto?'true':'false');
+    b.setAttribute('aria-label', abierto?'Cerrar menú':'Abrir menú');
+  }
+  b.addEventListener('click', function(){ estado(!h.classList.contains('abierto')); });
+  h.querySelectorAll('.site-nav a').forEach(function(a){ a.addEventListener('click', function(){ estado(false); }); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') estado(false); });
+  addEventListener('resize', function(){ if(innerWidth>860) estado(false); });
+})();
+</script>
 </body>
 </html>
