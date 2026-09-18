@@ -9,7 +9,27 @@ nav: contacto
   <div class="wrap">
     <p class="eyebrow">Contacto</p>
     <h1 class="h1">Habla con Jaime antes de decidir.</h1>
-    <p class="lead">Una sola pregunta antes del formulario: en qué momento estás.</p>
+    <p class="lead">Escríbele por WhatsApp o déjale tus datos. En los dos casos termina igual: en una conversación.</p>
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="wrap split split--centro">
+    <div class="min0">
+      <p class="eyebrow">01 — La vía más rápida</p>
+      <h2 class="h2" style="margin-bottom:20px">Escríbele por WhatsApp.</h2>
+      <p class="p">Un mensaje y Jaime te contesta ahí mismo. Es el camino más corto entre tu duda y una respuesta.</p>
+    </div>
+    <div class="min0">
+      <a class="btn btn--light btn--wa btn--bloque" href="https://api.whatsapp.com/send/?phone=525546151819&amp;text=Hola%2C+escribo+desde+el+sitio+de+Jaime+Lav%C3%ADn.+Me+gustar%C3%ADa+platicar+sobre+un+proyecto.&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.6a8.6 8.6 0 0 1-12.8 7.5L3 20.8l1.8-5.1A8.6 8.6 0 1 1 21 11.6z"/><path d="M8.9 9.1c.4 1 1 1.9 1.8 2.7.8.8 1.7 1.4 2.7 1.8l1-1.2 2 .9-.3 1.6c-1.9.3-4-.6-5.6-2.2-1.6-1.6-2.5-3.7-2.2-5.6l1.6-.3.9 2z"/></svg>
+        Escribir por WhatsApp
+      </a>
+      <p class="marca-enlaces" style="margin-top:18px;font-size:14px;flex-direction:row;flex-wrap:wrap;gap:8px 18px;align-items:baseline">También en
+        <a href="https://www.instagram.com/jaimelazza/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.linkedin.com/in/jaime-lavin-zavala-b5613397/" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+    </div>
   </div>
 </section>
 
@@ -18,7 +38,7 @@ nav: contacto
     <div class="min0">
       <form class="form" action="{{B}}contacto/gracias/" method="get" style="max-width:none">
         <div class="field">
-          <span class="label">01 — ¿En qué momento estás?</span>
+          <span class="label">02 — ¿En qué momento estás?</span>
           <div class="choices">
             <label class="choice"><input type="radio" name="momento" value="por-comprar"><span>Estoy por comprar un terreno</span></label>
             <label class="choice"><input type="radio" name="momento" value="ya-tengo"><span>Ya tengo un terreno</span></label>
@@ -28,36 +48,21 @@ nav: contacto
             <label class="choice"><input type="radio" name="momento" value="conversacion"><span>Quiero asistir a una conversación con Jaime</span></label>
           </div>
         </div>
-
-        <div class="field">
-          <label for="zona">02 — Ubicación de tu terreno o zona de interés</label>
-          <input id="zona" name="zona" type="text" placeholder="Municipio, colonia o zona">
-          <p class="pendiente" style="margin-top:10px">Opcional si tu interés es asistir a una conversación.</p>
-        </div>
-
-        <div class="field">
-          <label for="alcance">03 — Alcance aproximado del proyecto (opcional)</label>
-          <input id="alcance" name="alcance" type="text" placeholder="Superficie, número de recámaras, o lo que ya tengas claro">
-          <p class="pendiente" style="margin-top:10px">Aquí el filtro es el momento de vida: cuenta lo que ya tengas claro del proyecto.</p>
-        </div>
-
-        <div class="field">
-          <label for="mensaje">04 — ¿Qué necesitas resolver?</label>
-          <textarea id="mensaje" name="mensaje" placeholder="Escríbelo como lo dirías en una conversación."></textarea>
-        </div>
-
         <div class="field">
           <label for="nombre">Tu nombre</label>
           <input id="nombre" name="nombre" type="text" autocomplete="name">
         </div>
         <div class="field">
-          <label for="correo">Correo o teléfono</label>
-          <input id="correo" name="correo" type="text" autocomplete="email">
+          <label for="contacto">WhatsApp o correo</label>
+          <input id="contacto" name="contacto" type="text" autocomplete="tel">
         </div>
-
+        <div class="field">
+          <label for="mensaje">¿Qué necesitas resolver? (opcional)</label>
+          <textarea id="mensaje" name="mensaje" style="min-height:96px" placeholder="La zona que te interesa y qué tienes en mente."></textarea>
+        </div>
         <div>
-          <button class="btn btn--dark" type="submit">Enviar y agendar</button>
-          <p class="pendiente" style="margin-top:16px">Maqueta: el envío se conecta en cuanto se defina a dónde llegan los mensajes. Para respuesta inmediata, escribe por WhatsApp.</p>
+          <button class="btn btn--dark" type="submit">Que Jaime me busque</button>
+          <p class="pendiente" style="margin-top:16px">Maqueta: el envío se conecta en cuanto se defina a dónde llegan los mensajes.</p>
         </div>
       </form>
     </div>
@@ -67,12 +72,6 @@ nav: contacto
         <p class="eyebrow">Qué esperar</p>
         <p class="nota" style="margin-bottom:28px">El primer paso es una conversación: entender qué decisión tienes enfrente y qué la haría más fácil.</p>
         <p class="p" style="font-size:16px">Una sola página de contacto, a propósito: todo camino termina en una conversación con Jaime.</p>
-        <div class="marca marca--claro" style="margin-top:26px">
-          <p class="marca-nombre">Jaime, en sus redes</p>
-          <p class="marca-enlaces">
-            <a href="https://www.instagram.com/jaimelazza/" target="_blank" rel="noopener">Instagram</a><a href="https://www.linkedin.com/in/jaime-lavin-zavala-b5613397/" target="_blank" rel="noopener">LinkedIn</a><a href="https://api.whatsapp.com/send/?phone=525546151819&amp;text=Hola%2C+escribo+desde+el+sitio+de+Jaime+Lav%C3%ADn.+Me+gustar%C3%ADa+platicar+sobre+un+proyecto.&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener">WhatsApp</a>
-          </p>
-        </div>
         <p class="pendiente" style="margin-top:20px">[Pendiente: tiempo de respuesta esperado.]</p>
       </div>
       <div class="panel" style="background:var(--carbon);color:var(--blanco);margin-top:24px">

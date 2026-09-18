@@ -32,38 +32,32 @@ nav: para-ti
 <section class="section section--hueso">
   <div class="wrap split split--inicio">
     <div class="min0">
-      <p class="eyebrow">02 — Cuéntame tu caso</p>
-      <h2 class="h2">Unos datos y nos sentamos a conversar.</h2>
+      <p class="eyebrow">02 — Hablemos</p>
+      <h2 class="h2">La vía más rápida es WhatsApp.</h2>
+      <p class="p p--ancho">Mándale un mensaje y Jaime te contesta ahí mismo. Si prefieres, déjale tus datos y él te busca.</p>
+      <a class="btn btn--dark btn--wa" href="https://api.whatsapp.com/send/?phone=525546151819&amp;text=Hola%2C+escribo+desde+el+sitio+de+Jaime+Lav%C3%ADn.+Me+gustar%C3%ADa+platicar+sobre+un+proyecto.&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.6a8.6 8.6 0 0 1-12.8 7.5L3 20.8l1.8-5.1A8.6 8.6 0 1 1 21 11.6z"/><path d="M8.9 9.1c.4 1 1 1.9 1.8 2.7.8.8 1.7 1.4 2.7 1.8l1-1.2 2 .9-.3 1.6c-1.9.3-4-.6-5.6-2.2-1.6-1.6-2.5-3.7-2.2-5.6l1.6-.3.9 2z"/></svg>
+        Escribir por WhatsApp
+      </a>
       <p class="nota" style="margin-top:32px;max-width:40ch">El primer paso es una conversación: entender qué decisión tienes enfrente y qué la haría más fácil.</p>
     </div>
     <form class="form min0" action="{{B}}contacto/gracias/" method="get" style="max-width:none">
-      <div class="field">
-        <label for="resolver">¿Qué necesitas resolver?</label>
-        <textarea id="resolver" name="resolver" placeholder="Escríbelo como lo dirías en una conversación."></textarea>
-      </div>
-      <div class="field">
-        <label for="zona">Marca la zona de México que te interesa</label>
-        <input id="zona" name="zona" type="text" placeholder="Municipio, colonia o zona">
-      </div>
-      <div class="field">
-        <span class="label">¿Ya tienes terreno o propiedad?</span>
-        <div class="inline">
-          <label class="choice"><input type="radio" name="tenencia" value="Ya tengo el terreno o la propiedad"><span>Ya tengo el terreno o la propiedad</span></label>
-          <label class="choice"><input type="radio" name="tenencia" value="Estoy buscando"><span>Estoy buscando</span></label>
-          <label class="choice"><input type="radio" name="tenencia" value="Estoy explorando zonas"><span>Estoy explorando zonas</span></label>
-        </div>
-      </div>
+      <p class="eyebrow" style="margin:0">O deja tus datos</p>
       <div class="field">
         <label for="nombre">Tu nombre</label>
         <input id="nombre" name="nombre" type="text" autocomplete="name">
       </div>
       <div class="field">
-        <label for="correo">Correo o teléfono</label>
-        <input id="correo" name="correo" type="text" autocomplete="email">
+        <label for="contacto">WhatsApp o correo</label>
+        <input id="contacto" name="contacto" type="text" autocomplete="tel">
+      </div>
+      <div class="field">
+        <label for="resolver">¿Qué necesitas resolver? (opcional)</label>
+        <textarea id="resolver" name="resolver" style="min-height:96px" placeholder="La zona de México que te interesa y desde dónde escribes."></textarea>
       </div>
       <div>
-        <button class="btn btn--dark" type="submit">Hablemos de tu proyecto</button>
-        <p class="pendiente" style="margin-top:16px">Maqueta: el envío se conecta en cuanto se defina a dónde llegan los mensajes y quién los responde.</p>
+        <button class="btn btn--linea" type="submit">Que Jaime me busque</button>
+        <p class="pendiente" style="margin-top:16px">Maqueta: el envío se conecta en cuanto se defina a dónde llegan los mensajes.</p>
       </div>
     </form>
   </div>

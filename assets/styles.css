@@ -83,6 +83,10 @@ a{color:inherit;text-decoration:none}
 .btn{display:inline-block;padding:18px 28px;font-size:12px;letter-spacing:.14em;
   text-transform:uppercase;font-weight:600;border:2px solid transparent;
   cursor:pointer;font-family:inherit;transition:background .2s,color .2s,border-color .2s}
+.btn--wa{display:inline-flex;align-items:center;justify-content:center;gap:10px}
+.btn--wa svg{width:19px;height:19px;flex:0 0 auto;fill:none;stroke:currentColor;stroke-width:1.7;
+  stroke-linecap:round;stroke-linejoin:round}
+.btn--bloque{display:flex;width:100%;text-align:center}
 .btn--light{background:var(--marfil);color:var(--carbon)}
 .btn--light:hover{background:var(--tierra)}
 .btn--dark{background:var(--carbon);color:var(--marfil)}
