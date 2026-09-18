@@ -239,20 +239,19 @@ input::placeholder,textarea::placeholder{color:var(--piedra)}
 .footer-col a{font-size:15px;color:var(--tierra)}
 .footer-col a:hover{color:var(--blanco)}
 .footer-firma{margin:0;font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.45;color:var(--marfil)}
-.marca{margin:0 0 16px}
+.marca{margin:0 0 24px}
 .marca:last-child{margin-bottom:0}
 .marca-nombre{margin:0 0 6px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--piedra)}
-.marca-enlaces{margin:0;display:flex;flex-wrap:wrap;align-items:baseline;gap:0 9px;
-  font-size:15px;line-height:1.7;color:var(--tierra)}
+.marca-enlaces{margin:0;display:flex;flex-direction:column;align-items:flex-start;gap:10px;
+  font-size:15px;line-height:1.4;color:var(--tierra)}
 .marca-enlaces a{color:var(--tierra);border-bottom:1px solid transparent;padding-bottom:1px;
   transition:color .2s,border-color .2s}
 .marca-enlaces a:hover{color:var(--blanco);border-bottom-color:var(--blanco)}
-.marca-enlaces .sep{color:var(--grafito)}
+.marca--claro .marca-enlaces{flex-direction:row;flex-wrap:wrap;gap:8px 20px}
 .marca--claro .marca-nombre{color:var(--piedra)}
 .marca--claro .marca-enlaces{color:var(--grafito)}
 .marca--claro .marca-enlaces a{color:var(--carbon)}
 .marca--claro .marca-enlaces a:hover{color:var(--piedra);border-bottom-color:var(--piedra)}
-.marca--claro .marca-enlaces .sep{color:var(--tierra)}
 
 .footer-legal{margin:28px 0 0;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--piedra)}
 
@@ -351,12 +350,11 @@ a.icono-red:hover{border-color:var(--marfil);background:rgba(241,236,228,.08)}
 .links-titulo{margin:0 0 4px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;
   color:var(--piedra);text-align:center}
 .links-ecosistema{display:flex;flex-direction:column;gap:12px}
-.links-ecosistema .links-lista{gap:20px}
+.links-subtitulo{margin:14px 0 2px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--tierra);text-align:center}
+.links-ecosistema .links-lista{gap:12px}
 .boton-link--simple{min-height:64px}
 .boton-link--simple .boton-link-cuerpo{padding-right:0}
-.links-secundarios{display:flex;justify-content:center;gap:18px;margin:10px 0 0}
-.links-secundarios a{font-size:13px;color:var(--tierra);border-bottom:1px solid var(--grafito);padding-bottom:2px}
-.links-secundarios a:hover{color:var(--blanco);border-bottom-color:var(--blanco)}
 
 .links-pie{display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center;
   padding-top:clamp(20px,3.5vw,28px);border-top:2px solid var(--grafito)}
