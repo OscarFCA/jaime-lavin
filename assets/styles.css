@@ -232,11 +232,21 @@ input::placeholder,textarea::placeholder{color:var(--piedra)}
 .footer-col a{font-size:15px;color:var(--tierra)}
 .footer-col a:hover{color:var(--blanco)}
 .footer-firma{margin:0;font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.45;color:var(--marfil)}
-.footer-enlaces{margin:0 0 10px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--piedra);display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline}
-.footer-enlaces a{font-size:14px;letter-spacing:0;text-transform:none;color:var(--tierra);
-  border-bottom:1px solid var(--grafito);padding-bottom:2px}
-.footer-enlaces a:hover{color:var(--blanco);border-bottom-color:var(--blanco)}
+.marca{margin:0 0 16px}
+.marca:last-child{margin-bottom:0}
+.marca-nombre{margin:0 0 6px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--piedra)}
+.marca-enlaces{margin:0;display:flex;flex-wrap:wrap;align-items:baseline;gap:0 9px;
+  font-size:15px;line-height:1.7;color:var(--tierra)}
+.marca-enlaces a{color:var(--tierra);border-bottom:1px solid transparent;padding-bottom:1px;
+  transition:color .2s,border-color .2s}
+.marca-enlaces a:hover{color:var(--blanco);border-bottom-color:var(--blanco)}
+.marca-enlaces .sep{color:var(--grafito)}
+.marca--claro .marca-nombre{color:var(--piedra)}
+.marca--claro .marca-enlaces{color:var(--grafito)}
+.marca--claro .marca-enlaces a{color:var(--carbon)}
+.marca--claro .marca-enlaces a:hover{color:var(--piedra);border-bottom-color:var(--piedra)}
+.marca--claro .marca-enlaces .sep{color:var(--tierra)}
+
 .footer-legal{margin:28px 0 0;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--piedra)}
 
 /* ---------- responsivo ---------- */
