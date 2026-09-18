@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jaime Lavín — Arquitectura para la vida</title>
+<meta name="description" content="Del terreno al último detalle. Jaime Lavín acompaña decisiones sobre el lugar donde vas a vivir, invertir y dejar parte de tu historia.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1B1917">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/jl-isotipo.png">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  html, body { margin: 0; padding: 0; background: #F1ECE4; }
+  * { box-sizing: border-box; }
+  a { color: #1B1917; text-decoration: none; }
+  a:hover { color: #8C8177; }
+  ::selection { background: #B7AC9E; color: #1B1917; }
+  :focus-visible { outline: 2px solid #1B1917; outline-offset: 3px; }
+  img { max-width: 100%; }
+
+  /* ---------- placeholders de fotografía (aún no hay banco de imágenes) ---------- */
+  .jl-photo { position: absolute; inset: 0; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 14px; text-align: center;
+    padding: 24px; background-color: #E4DED4;
+    background-image: linear-gradient(135deg, rgba(140,129,119,0.16) 25%, transparent 25%, transparent 50%, rgba(140,129,119,0.16) 50%, rgba(140,129,119,0.16) 75%, transparent 75%);
+    background-size: 22px 22px; }
+  .jl-photo--dark { background-color: #23201E;
+    background-image: linear-gradient(135deg, rgba(241,236,228,0.06) 25%, transparent 25%, transparent 50%, rgba(241,236,228,0.06) 50%, rgba(241,236,228,0.06) 75%, transparent 75%); }
+  .jl-photo img { width: clamp(46px, 7vw, 78px); height: auto; opacity: 0.4; }
+  .jl-photo--dark img { filter: invert(1); opacity: 0.32; }
+  .jl-photo span { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: #8C8177; max-width: 26ch; line-height: 1.7; }
+
+  /* ---------- móvil y tablet ---------- */
+  @media (max-width: 1024px) {
+    [data-m~="header"] { gap: 18px !important; }
+    [data-m~="nav"] { gap: 12px 18px !important; }
+  }
+  @media (max-width: 860px) {
+    [data-m~="header"] { flex-direction: column !important; align-items: stretch !important;
+      padding: 18px 20px !important; gap: 16px !important; }
+    [data-m~="logo"] img { height: 42px !important; }
+    [data-m~="nav"] { width: 100% !important; display: grid !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 0 !important;
+      border-top: 1px solid #4A4542 !important; }
+    [data-m~="nav"] > a { border-bottom: 1px solid #4A4542 !important; border-right: 1px solid #4A4542 !important;
+      padding: 13px 4px !important; text-align: center !important; font-size: 10.5px !important; }
+    [data-m~="nav"] > a:nth-child(2n) { border-right: none !important; }
+    [data-m~="nav"] > a[data-m~="nav-cta"] { grid-column: 1 / -1 !important; border-right: none !important;
+      padding: 15px 4px !important; }
+    [data-m~="hero"] { grid-template-columns: 1fr !important; }
+    [data-m~="hero-copy"] { padding: 44px 20px 40px !important; gap: 26px !important; order: 1 !important; }
+    [data-m~="hero-media"] { order: 2 !important; border-left: none !important;
+      border-top: 2px solid #8C8177 !important; min-height: 56vw !important; }
+    [data-m~="split"] { grid-template-columns: 1fr !important; gap: 34px !important; }
+    [data-m~="section"] { padding-left: 20px !important; padding-right: 20px !important;
+      padding-top: 52px !important; padding-bottom: 52px !important; }
+    [data-m~="cards"] { grid-template-columns: 1fr !important; margin-right: 0 !important; }
+    [data-m~="cards"] > * { border-right: none !important; }
+    [data-m~="rowhead"] { flex-direction: column !important; align-items: flex-start !important; gap: 18px !important; }
+    [data-m~="media"] { min-height: 62vw !important; }
+    [data-m~="contacto-grid"] { grid-template-columns: 1fr !important; }
+    [data-m~="footer-grid"] { grid-template-columns: 1fr !important; gap: 30px !important; }
+  }
+  @media (min-width: 601px) and (max-width: 860px) {
+    [data-m~="nav"] { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+    [data-m~="nav"] > a:nth-child(2n) { border-right: 1px solid #4A4542 !important; }
+    [data-m~="nav"] > a:nth-child(3n) { border-right: none !important; }
+  }
+  @media (max-width: 600px) {
+    [data-m~="hero-cta"] { flex-direction: column !important; align-items: stretch !important; }
+    [data-m~="hero-cta"] > a { text-align: center !important; padding: 17px 20px !important; }
+  }
+  @media (max-width: 345px) {
+    [data-m~="nav"] { grid-template-columns: 1fr !important; }
+    [data-m~="nav"] > a { border-right: none !important; }
+  }
+  @media (max-width: 480px) {
+    [data-m~="nav"] > a { font-size: 9.5px !important; letter-spacing: 0.1em !important; padding: 12px 2px !important; }
+    [data-m~="card"] { padding: 26px 20px !important; }
+    [data-m~="panel"] { padding: 26px 20px !important; }
+    .jl-photo span { font-size: 10px !important; letter-spacing: 0.18em !important; }
+  }
+  /* En pantallas táctiles el hover no aplica: los enlaces ya son objetivos grandes */
+  @media (hover: none) {
+    a { -webkit-tap-highlight-color: rgba(140,129,119,0.25); }
+  }
+</style>
+</helmet>
+
+<div style="font-family: 'Instrument Sans', 'Century Gothic', sans-serif; color: #1B1917; background: #F1ECE4; width: 100%; overflow-x: hidden;">
+
+  <header data-m="header" style="background: #1B1917; color: #FFFFFF; padding: 20px clamp(20px, 4vw, 56px); display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap;">
+    <a href="#inicio" data-m="logo" style="display: block; flex: 0 0 auto;">
+      <img src="assets/firma-blanca.png" alt="Jaime Lavín — Arquitectura para la vida" style="display: block; height: 52px; width: auto;">
+    </a>
+    <nav data-m="nav" style="display: flex; flex-wrap: wrap; gap: clamp(14px, 1.8vw, 30px); align-items: center;">
+      <a href="#inicio" style="color: #FFFFFF; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; padding: 6px 0; border-bottom: 2px solid #FFFFFF;">Inicio</a>
+      <a href="#sobre-mi" style="color: #B7AC9E; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; padding: 6px 0; border-bottom: 2px solid transparent;" style-hover="color: #FFFFFF; border-bottom: 2px solid #FFFFFF;">Sobre mí</a>
+      <a href="#para-ti" style="color: #B7AC9E; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; padding: 6px 0; border-bottom: 2px solid transparent;" style-hover="color: #FFFFFF; border-bottom: 2px solid #FFFFFF;">Para ti</a>
+      <a href="#manifiestos" style="color: #B7AC9E; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; padding: 6px 0; border-bottom: 2px solid transparent;" style-hover="color: #FFFFFF; border-bottom: 2px solid #FFFFFF;">Manifiestos</a>
+      <a href="#terrenos" style="color: #B7AC9E; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; padding: 6px 0; border-bottom: 2px solid transparent;" style-hover="color: #FFFFFF; border-bottom: 2px solid #FFFFFF;">Terrenos</a>
+      <a href="#conversaciones" style="color: #B7AC9E; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; padding: 6px 0; border-bottom: 2px solid transparent;" style-hover="color: #FFFFFF; border-bottom: 2px solid #FFFFFF;">Conversaciones</a>
+      <a href="#contacto" data-m="nav-cta" style="color: #1B1917; background: #F1ECE4; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; padding: 12px 20px;" style-hover="background: #B7AC9E;">Contacto</a>
+    </nav>
+  </header>
+
+  <section id="inicio" data-screen-label="Hero" data-m="hero" style="background: #1B1917; color: #FFFFFF; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); border-top: 2px solid #8C8177;">
+    <div data-m="hero-copy" style="padding: clamp(48px, 7vw, 104px) clamp(20px, 4vw, 56px); display: flex; flex-direction: column; justify-content: center; gap: 36px; min-width: 0;">
+      <p style="margin: 0; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #B7AC9E;">Arquitectura para la vida</p>
+      <h1 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(38px, 5.2vw, 76px); line-height: 1.04; letter-spacing: -0.015em; text-wrap: pretty; max-width: 16ch;">Una vida extraordinaria merece un lugar para vivirla.</h1>
+      <p style="margin: 0; font-size: clamp(16px, 1.25vw, 19px); line-height: 1.6; color: #E4DED4; max-width: 46ch; text-wrap: pretty;">Del terreno al último detalle, Jaime te acompaña a tomar mejores decisiones sobre el lugar donde vas a vivir, invertir y dejar parte de tu historia.</p>
+      <div data-m="hero-cta" style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 4px;">
+        <a href="#contacto" style="background: #F1ECE4; color: #1B1917; padding: 18px 28px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600;" style-hover="background: #B7AC9E;">Habla con Jaime antes de decidir</a>
+        <a href="#conversaciones" style="border: 2px solid #8C8177; color: #FFFFFF; padding: 18px 28px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600;" style-hover="border-color: #F1ECE4; background: rgba(241,236,228,0.08);">Ver conversaciones</a>
+      </div>
+    </div>
+    <div data-m="hero-media" style="position: relative; min-height: clamp(340px, 46vw, 660px); border-left: 2px solid #8C8177; filter: grayscale(1) contrast(1.05);">
+      <div class="jl-photo jl-photo--dark"><img src="assets/jl-isotipo.png" alt=""><span>Fotografía de Jaime — pendiente</span></div>
+    </div>
+  </section>
+
+  <section id="para-ti" data-screen-label="En qué te puedo ayudar" data-m="section" style="padding: clamp(56px, 7vw, 110px) clamp(20px, 4vw, 56px); border-bottom: 2px solid #1B1917;">
+    <div data-m="split" style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(32px, 4vw, 72px); align-items: start;">
+      <div style="min-width: 0;">
+        <p style="margin: 0 0 24px; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #8C8177;">01 — En qué te puedo ayudar</p>
+        <h2 style="margin: 0 0 24px; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(28px, 3.2vw, 46px); line-height: 1.12; text-wrap: pretty; max-width: 22ch;">Decisiones sobre dónde y cómo vas a vivir.</h2>
+        <p style="margin: 0 0 32px; font-size: 17px; line-height: 1.65; color: #4A4542; max-width: 44ch; text-wrap: pretty;">Patrimonio, familia, futuro y legado. Antes de pensar en una casa, quiero entender cómo quieres vivir.</p>
+        <a href="#para-ti" style="border-bottom: 2px solid #1B1917; padding-bottom: 6px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600;" style-hover="color: #8C8177; border-color: #8C8177;">Ver las cuatro audiencias</a>
+      </div>
+      <div style="border: 2px solid #1B1917; overflow: hidden; min-width: 0;">
+      <div data-m="cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0; background: #F1ECE4; margin: 0 -2px -2px 0;">
+        <article data-m="card" style="background: #F1ECE4; padding: 32px 26px; display: flex; flex-direction: column; gap: 14px; min-width: 0; border-right: 2px solid #B7AC9E; border-bottom: 2px solid #B7AC9E;">
+          <span style="font-size: 11px; letter-spacing: 0.2em; color: #8C8177;">01</span>
+          <h3 style="margin: 0; font-size: 18px; font-weight: 600; line-height: 1.25;">Familia patrimonial en crecimiento</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4A4542; text-wrap: pretty;">La casa donde crecen los hijos, se reúne la familia y, con el tiempo, llegan los nietos.</p>
+          <a href="#contacto" style="margin-top: auto; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; color: #8C8177;" style-hover="color: #1B1917;">Hablemos →</a>
+        </article>
+        <article data-m="card" style="background: #F1ECE4; padding: 32px 26px; display: flex; flex-direction: column; gap: 14px; min-width: 0; border-right: 2px solid #B7AC9E; border-bottom: 2px solid #B7AC9E;">
+          <span style="font-size: 11px; letter-spacing: 0.2em; color: #8C8177;">02</span>
+          <h3 style="margin: 0; font-size: 18px; font-weight: 600; line-height: 1.25;">Patrimonial de descanso</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4A4542; text-wrap: pretty;">Una segunda casa para descanso, familia y amigos.</p>
+          <a href="#contacto" style="margin-top: auto; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; color: #8C8177;" style-hover="color: #1B1917;">Hablemos →</a>
+        </article>
+        <article data-m="card" style="background: #F1ECE4; padding: 32px 26px; display: flex; flex-direction: column; gap: 14px; min-width: 0; border-right: 2px solid #B7AC9E; border-bottom: 2px solid #B7AC9E;">
+          <span style="font-size: 11px; letter-spacing: 0.2em; color: #8C8177;">03</span>
+          <h3 style="margin: 0; font-size: 18px; font-weight: 600; line-height: 1.25;">Ejecutivo en nueva etapa</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4A4542; text-wrap: pretty;">Un departamento, una remodelación o una propiedad que represente quién eres ahora.</p>
+          <a href="#contacto" style="margin-top: auto; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; color: #8C8177;" style-hover="color: #1B1917;">Hablemos →</a>
+        </article>
+        <article data-m="card" style="background: #F1ECE4; padding: 32px 26px; display: flex; flex-direction: column; gap: 14px; min-width: 0; border-right: 2px solid #B7AC9E; border-bottom: 2px solid #B7AC9E;">
+          <span style="font-size: 11px; letter-spacing: 0.2em; color: #8C8177;">04</span>
+          <h3 style="margin: 0; font-size: 18px; font-weight: 600; line-height: 1.25;">Construyendo vida en México</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #4A4542; text-wrap: pretty;">Acompañamiento para decidir en México desde fuera del país.</p>
+          <a href="#contacto" style="margin-top: auto; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; color: #8C8177;" style-hover="color: #1B1917;">Hablemos →</a>
+        </article>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre-mi" data-screen-label="Territorio" data-m="section" style="background: #B7AC9E; color: #1B1917; padding: clamp(56px, 7vw, 110px) clamp(20px, 4vw, 56px); border-bottom: 2px solid #1B1917;">
+    <div data-m="split" style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(32px, 4vw, 72px); align-items: center;">
+      <div style="min-width: 0;">
+        <p style="margin: 0 0 28px; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #4A4542;">02 — Territorio</p>
+        <blockquote style="margin: 0 0 28px; font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 300; font-size: clamp(30px, 3.8vw, 56px); line-height: 1.1; letter-spacing: -0.01em; text-wrap: pretty; max-width: 18ch;">Del terreno al último detalle.</blockquote>
+        <p style="margin: 0 0 18px; font-size: 17px; line-height: 1.65; max-width: 48ch; text-wrap: pretty;">Un terreno puede parecer extraordinario y ser completamente equivocado para la casa que quieres. Trabajo desde esa pregunta: dónde, por qué ahí, y qué vida va a ocurrir dentro.</p>
+        <p style="margin: 0; font-size: 17px; line-height: 1.65; max-width: 48ch; text-wrap: pretty;">Desde 1997, acompañando decisiones de terreno, obra y detalle.</p>
+      </div>
+      <div data-m="media" style="position: relative; min-height: clamp(300px, 34vw, 480px); border: 2px solid #1B1917; filter: grayscale(1) contrast(1.05); min-width: 0;">
+        <div class="jl-photo"><img src="assets/jl-isotipo.png" alt=""><span>Materia: piedra, madera, luz — pendiente</span></div>
+      </div>
+    </div>
+  </section>
+
+  <sc-if value="{{ mostrarTerrenos }}" hint-placeholder-val="{{ true }}">
+  <section id="terrenos" data-screen-label="Terrenos" data-m="section" style="padding: clamp(56px, 7vw, 110px) clamp(20px, 4vw, 56px); border-bottom: 2px solid #1B1917;">
+    <div style="max-width: 1400px; margin: 0 auto;">
+      <div data-m="rowhead" style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-end; justify-content: space-between; padding-bottom: 32px; border-bottom: 2px solid #1B1917;">
+        <div style="min-width: 0;">
+          <p style="margin: 0 0 20px; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #8C8177;">03 — Terrenos</p>
+          <h2 style="margin: 0 0 16px; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(28px, 3.2vw, 46px); line-height: 1.12;">Lugares donde empezar.</h2>
+          <p style="margin: 0; font-size: 17px; line-height: 1.65; color: #4A4542; max-width: 52ch; text-wrap: pretty;">Terrenos reales que Jaime conoce de cerca, cada uno con su propio potencial y su propio tipo de proyecto. La conversación decide si alguno calza con lo que buscas.</p>
+        </div>
+        <a href="#terrenos" style="border-bottom: 2px solid #1B1917; padding-bottom: 6px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; white-space: nowrap;" style-hover="color: #8C8177; border-color: #8C8177;">Ver todos los terrenos</a>
+      </div>
+
+      <div style="border: 2px solid #1B1917; border-top: none; overflow: hidden;">
+      <div data-m="cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0; background: #F1ECE4; margin: 0 -2px -2px 0;">
+        <div style="background: #F1ECE4; padding: 0; display: flex; flex-direction: column; min-width: 0; border-right: 2px solid #B7AC9E; border-bottom: 2px solid #B7AC9E;">
+          <div data-m="media" style="position: relative; height: clamp(220px, 24vw, 320px); border-bottom: 2px solid #1B1917; filter: grayscale(1) contrast(1.05);">
+            <div class="jl-photo"><img src="assets/jl-isotipo.png" alt=""><span>Foto del terreno — pendiente</span></div>
+          </div>
+          <div data-m="card" style="padding: 28px 26px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+            <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+              <span style="border: 2px solid #8C8177; color: #4A4542; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; padding: 5px 10px; font-weight: 600;">Estatus por definir</span>
+              <span style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #8C8177;">Zona aproximada</span>
+            </div>
+            <h3 style="margin: 0; font-size: 22px; font-weight: 600; line-height: 1.2;">[Nombre o zona del terreno]</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4A4542; text-wrap: pretty;">[Tamaño, características del sitio y qué tipo de proyecto podría vivir ahí. Pendiente de banco real de terrenos.]</p>
+            <a href="#contacto" style="margin-top: auto; padding-top: 14px; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; color: #8C8177;" style-hover="color: #1B1917;">Preguntar por este terreno →</a>
+          </div>
+        </div>
+        <div style="background: #F1ECE4; padding: 0; display: flex; flex-direction: column; min-width: 0; border-right: 2px solid #B7AC9E; border-bottom: 2px solid #B7AC9E;">
+          <div data-m="media" style="position: relative; height: clamp(220px, 24vw, 320px); border-bottom: 2px solid #1B1917; filter: grayscale(1) contrast(1.05);">
+            <div class="jl-photo"><img src="assets/jl-isotipo.png" alt=""><span>Foto del terreno — pendiente</span></div>
+          </div>
+          <div data-m="card" style="padding: 28px 26px; display: flex; flex-direction: column; gap: 12px; flex: 1;">
+            <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+              <span style="border: 2px solid #8C8177; color: #4A4542; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; padding: 5px 10px; font-weight: 600;">Estatus por definir</span>
+              <span style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #8C8177;">Zona aproximada</span>
+            </div>
+            <h3 style="margin: 0; font-size: 22px; font-weight: 600; line-height: 1.2;">[Nombre o zona del terreno]</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4A4542; text-wrap: pretty;">[Tamaño, características del sitio y qué tipo de proyecto podría vivir ahí. Pendiente de banco real de terrenos.]</p>
+            <a href="#contacto" style="margin-top: auto; padding-top: 14px; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; color: #8C8177;" style-hover="color: #1B1917;">Preguntar por este terreno →</a>
+          </div>
+        </div>
+        <div style="background: #E4DED4; display: flex; flex-direction: column; min-width: 0; border-right: 2px solid #B7AC9E; border-bottom: 2px solid #B7AC9E;">
+          <div style="position: relative; flex: 1; min-height: clamp(260px, 28vw, 360px); overflow: hidden; background: #E4DED4;">
+            <div style="position: absolute; inset: 0; background-image: linear-gradient(to right, rgba(140,129,119,0.35) 1px, transparent 1px), linear-gradient(to bottom, rgba(140,129,119,0.35) 1px, transparent 1px); background-size: 34px 34px;"></div>
+            <div style="position: absolute; left: 34%; top: 38%; width: 14px; height: 14px; background: #1B1917; border-radius: 50%; box-shadow: 0 0 0 8px rgba(27,25,23,0.12);"></div>
+            <div style="position: absolute; left: 62%; top: 60%; width: 14px; height: 14px; background: #1B1917; border-radius: 50%; box-shadow: 0 0 0 8px rgba(27,25,23,0.12);"></div>
+            <div style="position: absolute; left: 48%; top: 22%; width: 14px; height: 14px; background: #8C8177; border-radius: 50%; box-shadow: 0 0 0 8px rgba(140,129,119,0.14);"></div>
+          </div>
+          <div style="padding: 26px; border-top: 2px solid #1B1917;">
+            <p style="margin: 0 0 8px; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #8C8177;">Mapa general</p>
+            <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4A4542; text-wrap: pretty;">Un pin por terreno, en zona aproximada. Maqueta estática: el proveedor de mapa sigue pendiente.</p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+  </sc-if>
+
+  <section id="manifiestos" data-screen-label="Manifiestos" data-m="section" style="background: #1B1917; color: #FFFFFF; padding: clamp(56px, 7vw, 110px) clamp(20px, 4vw, 56px);">
+    <div style="max-width: 1400px; margin: 0 auto;">
+      <div data-m="rowhead" style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-end; justify-content: space-between; margin-bottom: 48px;">
+        <div style="min-width: 0;">
+          <p style="margin: 0 0 20px; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #B7AC9E;">04 — Manifiestos</p>
+          <h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(28px, 3.2vw, 46px); line-height: 1.12;">Cuatro cosas que creo.</h2>
+        </div>
+        <a href="#manifiestos" style="color: #FFFFFF; border-bottom: 2px solid #8C8177; padding-bottom: 6px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; white-space: nowrap;" style-hover="border-color: #FFFFFF;">Leer los manifiestos</a>
+      </div>
+      <div style="border-top: 2px solid #8C8177; border-bottom: 2px solid #8C8177; overflow: hidden;">
+      <div data-m="cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0; background: #1B1917; margin: 0 -2px -2px 0;">
+        <article data-m="card" style="background: #1B1917; padding: 40px 28px 44px; display: flex; flex-direction: column; gap: 20px; min-width: 0; border-right: 2px solid #4A4542; border-bottom: 2px solid #4A4542;">
+          <span style="font-family: 'Fraunces', Georgia, serif; font-size: 34px; font-weight: 300; color: #8C8177; line-height: 1;">I</span>
+          <p style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-size: 22px; line-height: 1.35; font-weight: 300; text-wrap: pretty;">Una casa no es un plano; es la vida que va a ocurrir ahí.</p>
+        </article>
+        <article data-m="card" style="background: #1B1917; padding: 40px 28px 44px; display: flex; flex-direction: column; gap: 20px; min-width: 0; border-right: 2px solid #4A4542; border-bottom: 2px solid #4A4542;">
+          <span style="font-family: 'Fraunces', Georgia, serif; font-size: 34px; font-weight: 300; color: #8C8177; line-height: 1;">II</span>
+          <p style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-size: 22px; line-height: 1.35; font-weight: 300; text-wrap: pretty;">No todos los terrenos buenos son buenos para ti.</p>
+        </article>
+        <article data-m="card" style="background: #1B1917; padding: 40px 28px 44px; display: flex; flex-direction: column; gap: 20px; min-width: 0; border-right: 2px solid #4A4542; border-bottom: 2px solid #4A4542;">
+          <span style="font-family: 'Fraunces', Georgia, serif; font-size: 34px; font-weight: 300; color: #8C8177; line-height: 1;">III</span>
+          <p style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-size: 22px; line-height: 1.35; font-weight: 300; text-wrap: pretty;">El detalle no es decoración; es respeto por cómo vives.</p>
+        </article>
+        <article data-m="card" style="background: #1B1917; padding: 40px 28px 44px; display: flex; flex-direction: column; gap: 20px; min-width: 0; border-right: 2px solid #4A4542; border-bottom: 2px solid #4A4542;">
+          <span style="font-family: 'Fraunces', Georgia, serif; font-size: 34px; font-weight: 300; color: #8C8177; line-height: 1;">IV</span>
+          <p style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-size: 22px; line-height: 1.35; font-weight: 300; text-wrap: pretty;">La decisión más importante puede ocurrir antes de construir: elegir dónde hacerlo.</p>
+        </article>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="conversaciones" data-screen-label="Conversaciones" data-m="section" style="padding: clamp(56px, 7vw, 110px) clamp(20px, 4vw, 56px); border-bottom: 2px solid #1B1917;">
+    <div data-m="split contacto-grid" style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(32px, 4vw, 72px); align-items: start;">
+      <div style="min-width: 0;">
+        <p style="margin: 0 0 24px; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #8C8177;">05 — Conversaciones</p>
+        <h2 style="margin: 0 0 24px; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(28px, 3.2vw, 46px); line-height: 1.12; text-wrap: pretty; max-width: 26ch;">Del terreno al último detalle: conversaciones con Jaime Lavín.</h2>
+        <p style="margin: 0 0 32px; font-size: 17px; line-height: 1.65; color: #4A4542; max-width: 48ch; text-wrap: pretty;">Un encuentro mensual entre el contenido y la conversación. Pueden participar directores, especialistas inmobiliarios, legales, de inversión o de paisaje.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
+          <a href="#conversaciones" style="background: #1B1917; color: #F1ECE4; padding: 18px 28px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600;" style-hover="background: #4A4542;">Reservar mi lugar</a>
+          <span style="font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #8C8177;">Próxima fecha: por confirmar</span>
+        </div>
+      </div>
+      <div id="contacto" data-m="panel" style="border: 2px solid #1B1917; background: #E4DED4; padding: clamp(32px, 3.5vw, 52px); min-width: 0;">
+        <p style="margin: 0 0 20px; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #8C8177;">06 — Contacto</p>
+        <h2 style="margin: 0 0 20px; font-family: 'Fraunces', Georgia, serif; font-weight: 300; font-size: clamp(26px, 2.6vw, 38px); line-height: 1.14; text-wrap: pretty;">Habla con Jaime antes de decidir.</h2>
+        <p style="margin: 0 0 28px; font-size: 16px; line-height: 1.6; color: #4A4542; text-wrap: pretty;">Una sola pregunta antes del formulario: en qué momento estás.</p>
+        <div style="display: flex; flex-direction: column; gap: 2px; background: #B7AC9E; border: 2px solid #1B1917; margin-bottom: 28px;">
+          <span style="background: #F1ECE4; padding: 14px 18px; font-size: 15px; line-height: 1.4;">Estoy por comprar un terreno</span>
+          <span style="background: #F1ECE4; padding: 14px 18px; font-size: 15px; line-height: 1.4;">Ya tengo un terreno</span>
+          <span style="background: #F1ECE4; padding: 14px 18px; font-size: 15px; line-height: 1.4;">Quiero construir o transformar mi casa</span>
+          <span style="background: #F1ECE4; padding: 14px 18px; font-size: 15px; line-height: 1.4;">Tengo una propiedad o terreno heredado</span>
+          <span style="background: #F1ECE4; padding: 14px 18px; font-size: 15px; line-height: 1.4;">Me interesa un terreno de los que vi</span>
+          <span style="background: #F1ECE4; padding: 14px 18px; font-size: 15px; line-height: 1.4;">Quiero asistir a una conversación con Jaime</span>
+        </div>
+        <a href="#contacto" style="display: inline-block; background: #1B1917; color: #F1ECE4; padding: 18px 28px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600;" style-hover="background: #4A4542;">Enviar y agendar</a>
+        <p style="margin: 28px 0 0; padding-left: 20px; border-left: 2px solid #8C8177; font-family: 'Fraunces', Georgia, serif; font-style: italic; font-size: 17px; line-height: 1.5; color: #1B1917; text-wrap: pretty;">Esta conversación no es una cotización. Es el primer paso para tomar una mejor decisión.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer data-m="section" style="background: #1B1917; color: #B7AC9E; padding: clamp(48px, 5vw, 80px) clamp(20px, 4vw, 56px) 36px;">
+    <div style="max-width: 1400px; margin: 0 auto;">
+      <div data-m="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: clamp(32px, 4vw, 64px); padding-bottom: 44px; border-bottom: 2px solid #4A4542;">
+        <div style="min-width: 0;">
+          <img src="assets/jl-isotipo.png" alt="JL." style="display: block; width: 62px; height: auto; filter: invert(1); margin-bottom: 24px;">
+          <p style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-style: italic; font-size: 19px; line-height: 1.45; color: #F1ECE4;">Jaime Lavín. Arquitectura para la vida.</p>
+        </div>
+        <nav style="display: flex; flex-direction: column; gap: 12px; min-width: 0;">
+          <p style="margin: 0 0 8px; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: #8C8177;">Navegación</p>
+          <a href="#sobre-mi" style="color: #B7AC9E; font-size: 15px;" style-hover="color: #FFFFFF;">Sobre mí</a>
+          <a href="#para-ti" style="color: #B7AC9E; font-size: 15px;" style-hover="color: #FFFFFF;">Para ti</a>
+          <a href="#manifiestos" style="color: #B7AC9E; font-size: 15px;" style-hover="color: #FFFFFF;">Manifiestos</a>
+          <a href="#terrenos" style="color: #B7AC9E; font-size: 15px;" style-hover="color: #FFFFFF;">Terrenos</a>
+          <a href="#conversaciones" style="color: #B7AC9E; font-size: 15px;" style-hover="color: #FFFFFF;">Conversaciones</a>
+        </nav>
+        <div style="display: flex; flex-direction: column; gap: 12px; min-width: 0;">
+          <p style="margin: 0 0 8px; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: #8C8177;">Ecosistema</p>
+          <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #B7AC9E; text-wrap: pretty;">LAZZA Arquitectos y LAMZO ejecutan los proyectos. Aquí habla Jaime.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px; min-width: 0;">
+          <p style="margin: 0 0 8px; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: #8C8177;">Contacto</p>
+          <a href="#contacto" style="color: #F1ECE4; font-size: 15px; border-bottom: 2px solid #4A4542; padding-bottom: 6px; align-self: flex-start;" style-hover="border-color: #F1ECE4;">Habla con Jaime antes de decidir</a>
+          <p style="margin: 8px 0 0; font-size: 14px; color: #8C8177;">Instagram y LinkedIn: por confirmar</p>
+        </div>
+      </div>
+      <p style="margin: 28px 0 0; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #8C8177;">© 2026 Jaime Lavín — borrador de trabajo, no aprobado</p>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;mostrarTerrenos&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Secciones&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      mostrarTerrenos: this.props.mostrarTerrenos ?? true
+    };
+  }
+}
+</script>
+</body>
+</html>
