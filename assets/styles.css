@@ -208,6 +208,25 @@ input::placeholder,textarea::placeholder{color:var(--piedra)}
 .site-footer{background:var(--carbon);color:var(--tierra);
   padding:clamp(48px,5vw,80px) var(--pad-x) 36px}
 .site-footer .isotipo{width:62px;filter:invert(1);margin-bottom:24px}
+.tarjeta-contacto{display:flex;align-items:center;gap:clamp(20px,3vw,40px);flex-wrap:wrap;
+  border:2px solid var(--grafito);background:rgba(241,236,228,.04);
+  padding:clamp(22px,2.6vw,32px);margin-bottom:clamp(36px,4vw,56px)}
+.tarjeta-foto{width:96px;height:96px;border-radius:50%;object-fit:cover;
+  border:2px solid var(--piedra);flex:0 0 auto}
+.tarjeta-datos{flex:1 1 260px;min-width:0}
+.tarjeta-nombre{margin:0;font-family:var(--serif);font-weight:300;font-size:clamp(24px,2.4vw,30px);
+  line-height:1.15;color:var(--blanco)}
+.tarjeta-tagline{margin:4px 0 14px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--tierra)}
+.tarjeta-datos-lista{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.tarjeta-datos-lista li{font-size:13px;line-height:1.5;color:var(--piedra);
+  display:grid;grid-template-columns:minmax(0,16ch) auto;gap:4px 14px;align-items:baseline}
+.tarjeta-datos-lista span{letter-spacing:.14em;text-transform:uppercase;font-size:11px;
+  color:var(--grafito)}
+.tarjeta-datos-lista b{font-weight:400;color:var(--tierra)}
+.tarjeta-acciones{display:flex;flex-direction:column;gap:16px;align-items:flex-start;flex:0 0 auto}
+.tarjeta-acciones .link{color:var(--tierra);border-bottom-color:var(--grafito)}
+.tarjeta-acciones .link:hover{color:var(--blanco);border-bottom-color:var(--blanco)}
+
 .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:clamp(32px,4vw,64px);padding-bottom:44px;border-bottom:2px solid var(--grafito)}
 .footer-col{display:flex;flex-direction:column;gap:12px;min-width:0}
@@ -247,6 +266,10 @@ input::placeholder,textarea::placeholder{color:var(--piedra)}
   .hero-copy{padding:44px 20px 40px!important;gap:26px!important}
   .media--card{min-height:58vw}
   .footer-grid{grid-template-columns:1fr;gap:30px}
+  .tarjeta-contacto{flex-direction:column;align-items:flex-start;gap:20px;padding:24px 20px}
+  .tarjeta-datos-lista li{grid-template-columns:1fr;gap:2px}
+  .tarjeta-acciones{width:100%}
+  .tarjeta-acciones .btn{width:100%;text-align:center}
   .site-footer{padding:44px 20px 32px}
   .panel{padding:26px 22px}
   .map{min-height:320px}
@@ -317,7 +340,8 @@ a.icono-red:hover{border-color:var(--marfil);background:rgba(241,236,228,.08)}
 
 /* en la página de enlaces el pie se reduce: la tira de botones es el final */
 main:has(.links-fondo)+.site-footer{padding-top:28px}
-main:has(.links-fondo)+.site-footer .footer-grid{display:none}
+main:has(.links-fondo)+.site-footer .footer-grid,
+main:has(.links-fondo)+.site-footer .tarjeta-contacto{display:none}
 main:has(.links-fondo)+.site-footer .footer-legal{margin:0;text-align:center}
 
 @media (max-width:480px){
