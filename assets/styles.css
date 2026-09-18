@@ -269,16 +269,10 @@ input::placeholder,textarea::placeholder{color:var(--piedra)}
 @media (hover:none){a,.btn{-webkit-tap-highlight-color:rgba(140,129,119,.25)}}
 
 /* ---------- página de enlaces (/links/) ---------- */
-.pagina-links{background:var(--carbon);color:var(--blanco)}
-.links{max-width:520px;margin:0 auto;padding:clamp(40px,7vw,72px) 20px clamp(40px,6vw,64px);
-  display:flex;flex-direction:column;gap:clamp(28px,4vw,40px)}
-.links-cabecera{display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px}
-.links-avatar{width:clamp(104px,26vw,132px);height:clamp(104px,26vw,132px);border-radius:50%;
-  object-fit:cover;border:2px solid var(--piedra)}
-.links-firma{width:clamp(190px,52vw,240px);height:auto}
-.links-tagline{margin:-6px 0 0;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--tierra)}
-.links-bajada{margin:0;font-family:var(--serif);font-style:italic;font-weight:300;
-  font-size:clamp(17px,4.4vw,20px);line-height:1.45;color:var(--hueso);max-width:30ch;text-wrap:pretty}
+.links{max-width:560px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(28px,4vw,40px)}
+.links-hero{display:flex;align-items:center;gap:clamp(24px,3.5vw,44px);flex-wrap:wrap}
+.links-avatar{width:clamp(104px,14vw,148px);height:clamp(104px,14vw,148px);border-radius:50%;
+  object-fit:cover;border:2px solid var(--piedra);flex:0 0 auto}
 
 .links-lista{display:flex;flex-direction:column;gap:12px}
 .boton-link{display:flex;flex-direction:column;gap:5px;padding:18px 22px;text-align:center;
@@ -299,9 +293,8 @@ input::placeholder,textarea::placeholder{color:var(--piedra)}
   color:var(--piedra);text-align:center}
 .links-pendiente{margin:4px 0 0;font-size:12px;line-height:1.55;color:var(--piedra);text-align:center;text-wrap:pretty}
 
-.links-pie{display:flex;flex-direction:column;align-items:center;gap:16px;
-  padding-top:clamp(20px,4vw,28px);border-top:2px solid var(--grafito)}
+.links-pie{display:flex;flex-direction:column;align-items:center;gap:18px;
+  padding-top:clamp(24px,4vw,32px);border-top:2px solid var(--grafito)}
 .links-isotipo{width:44px;filter:invert(1);opacity:.75}
 .links-pie .link{color:var(--tierra);border-bottom-color:var(--grafito)}
 .links-pie .link:hover{color:var(--blanco);border-bottom-color:var(--blanco)}
-.links-legal{margin:0;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--piedra)}

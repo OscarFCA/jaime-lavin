@@ -26,7 +26,6 @@ LEAFLET_FOOT = ('<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"><
                 '<script src="{{B}}assets/mapa.js"></script>')
 
 shell = (SRC / "shell.html").read_text()
-shell_links = (SRC / "shell-links.html").read_text()
 generados = []
 
 for frag in sorted((SRC / "pages").glob("*.html")):
@@ -42,8 +41,7 @@ for frag in sorted((SRC / "pages").glob("*.html")):
     salida = RAIZ / meta["out"]
     base = "../" * (len(pathlib.PurePath(meta["out"]).parts) - 1)
 
-    base_html = shell_links if meta.get("shell") == "links" else shell
-    html = base_html.replace("{{TITLE}}", meta["title"]).replace("{{DESC}}", meta["desc"])
+    html = shell.replace("{{TITLE}}", meta["title"]).replace("{{DESC}}", meta["desc"])
     html = html.replace("{{HEAD_EXTRA}}", LEAFLET_HEAD if meta.get("mapa") == "si" else "")
     html = html.replace("{{FOOT_EXTRA}}", LEAFLET_FOOT if meta.get("mapa") == "si" else "")
     html = html.replace("{{BODY}}", cuerpo.strip())

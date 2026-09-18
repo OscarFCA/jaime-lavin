@@ -10,7 +10,7 @@ Sitio de la marca personal de Jaime Lavín, en GitHub Pages.
 ## Cómo se construye
 
 HTML estático, sin framework ni runtime. El header, el nav, el footer y el `<head>` viven
-una sola vez en `src/shell.html` (la página de enlaces usa `src/shell-links.html`, sin menú); cada página es un fragmento en `src/pages/*.html` con un
+una sola vez en `src/shell.html`; cada página es un fragmento en `src/pages/*.html` con un
 bloque `<!--meta -->` que define su URL, título, descripción y el enlace activo del menú.
 
 ```
@@ -38,7 +38,7 @@ responsiva en 1024 / 860 / 600 / 480 / 345 px.
 | `/conversaciones/` + `/gracias/` | Registro al encuentro mensual |
 | `/guia/` + `/gracias/` | Lead magnet (propuesta sin confirmar) |
 | `/contacto/` + `/gracias/` | Única página de contacto, con triage |
-| `/links/` | Página de enlaces tipo Linktree, sin menú, para la bio de redes |
+| `/contacto/enlaces/` | Página de enlaces tipo Linktree, para la bio de redes (`/links/` redirige aquí) |
 | `/404.html` | Error |
 
 ## Pendientes de contenido
